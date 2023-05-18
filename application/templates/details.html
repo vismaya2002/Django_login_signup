@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register - Input Form by Tooplate</title>
+	<!--
+    Template 2105 Input
+	http://www.tooplate.com/view/2105-input
+	-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tooplate.css' %}">
+</head>
+
+<body id="register">
+    <div class="container">
+        <div class="row tm-register-row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-register-col-l">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-field">
+                        <input placeholder="First Name" id="firstname" name="firstname" type="text" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Last Name" id="lastname" name="lastname" type="text" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Email" id="email" name="email" type="text" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Mobile" id="mobile" name="mobile" type="text" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Address" id="address" name="address" type="text" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="District/Province" id="district" name="district" type="text" class="validate">
+                    </div>
+                    <div class="row">
+                        <input placeholder="city" id="city" name="city" type="text" class="validate">
+                    </div>
+                    <div class="text-right mt-4">
+                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-register-col-r">
+                <header class="mb-5">
+                    <h3 class="mt-0 text-white">Enter your details </h3>
+                    <p class="grey-text">This page is used to enter the details.</p>
+                    <p class="grey-text">The entered details will be displayed when you login with your registered username and password.
+                        
+                    </p>
+                </header>
+
+            </div>
+        </div>
+        <footer class="row tm-mt-big mb-3">
+            
+        </footer>
+    </div>
+
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>

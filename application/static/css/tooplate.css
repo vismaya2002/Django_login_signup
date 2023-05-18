@@ -1,10 +1,4 @@
-/*
 
-Template 2105 Input
-
-http://www.tooplate.com/view/2105-input
-	
-*/
 
 
 html {
@@ -109,7 +103,7 @@ ul.tm-home-list:not(.browser-default) {
 }
 
 #home {
-  background-image: url(../img/input-bg-05.jpg);
+  background-image: url(../img/input-bg-04.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
