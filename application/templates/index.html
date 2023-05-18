@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input HTML Form Pack by Tooplate</title>
+    <!--
+
+    Template 2105 Input
+
+	http://www.tooplate.com/view/2105-input
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tooplate.css' %}">
+</head>
+
+<body id="home">
+    <div class="container tm-home-mt tm-home-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="tm-home-left">
+                    <h1 class="tm-site-title">WELCOME  {{request.user}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="tm-home-left mt-3 font-weight-light">
+                    <p class="tm-mb-35"><b>This a simple Django project with a login and signup option.</b></p>
+                    <!--p class="tm-mb-35">Feel free to modify and use any form design. Please share it to your friends.</p-->
+                    
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <ul class="list-group tm-home-list tm-bg-black font-weight-light">
+                    
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="http://127.0.0.1:8000/signup/" class="tm-white-text">Sign Up</a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="login.html" class="tm-white-text">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
