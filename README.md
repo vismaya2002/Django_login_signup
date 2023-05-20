@@ -57,7 +57,7 @@ After logging in you will be directed to this page which displays the details en
 ## Simply clone the repository and run the server:
 ```sh
 # Install Git First // (Else You Can Download And Upload to Your Local Server)
-$ git clone https://github.com/vismaya2002/Django_login_signup
+$ git clone https://github.com/vismaya2002/Django_login_signup.git
 
 # Open Git Cloned File
 $ cd Django_login_signup
