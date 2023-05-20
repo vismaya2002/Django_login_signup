@@ -51,5 +51,17 @@ Login with your correct username and password to display the details you have en
 
 After logging in you will be directed to this page which displays the details entered.
 
+## Simply clone the repository and run the main file:
+```sh
+# Install Git First // (Else You Can Download And Upload to Your Local Server)
+$ git clone https://github.com/vismaya2002/Django_login_signup
+# Open Git Cloned File
+$ cd Django_login_signup
+# Config Virtual Env (Skip is already Done.)
+$ virtualenv -p /usr/bin/python3 venv
+$ . ./venv/bin/activate
+# Run Setup
+$ python(3) -m setup
 
+```
 
