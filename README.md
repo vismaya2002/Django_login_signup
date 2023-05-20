@@ -51,19 +51,30 @@ Login with your correct username and password to display the details you have en
 
 After logging in you will be directed to this page which displays the details entered.
 
-## Simply clone the repository and run the main file:
+
+# Self-hosting(Development Server)
+
+## Simply clone the repository and run the server:
 ```sh
 # Install Git First // (Else You Can Download And Upload to Your Local Server)
 $ git clone https://github.com/vismaya2002/Django_login_signup
+
 # Open Git Cloned File
 $ cd Django_login_signup
+
 # Config Virtual Env (Skip is already Done.)
-$ pip install virtualenv 
-$ virtualenv venv
-$ venv/Scripts/activate
-$ pip install -r requirements.txt
-# Run Setup
-$ py manage.py runserver
+$ virtualenv -p /usr/bin/python3 venv
+$ . ./venv/bin/activate
 
-```
+# Install All Requirements.
+$ pip(3) install -r requirements.txt
 
+# Run makemigrations and migrate command.
+$ python(3) manage.py makemigrations application
+$ python(3) manage.py migrate
+
+# Create a Superuser.
+$ python(3) manage.py createsuperuser
+
+# Start Server
+$ python(3) manage.py runserver 0.0.0.0:80
