@@ -58,10 +58,12 @@ $ git clone https://github.com/vismaya2002/Django_login_signup
 # Open Git Cloned File
 $ cd Django_login_signup
 # Config Virtual Env (Skip is already Done.)
-$ virtualenv -p /usr/bin/python3 venv
-$ . ./venv/bin/activate
+$ pip install virtualenv 
+$ virtualenv venv
+$ venv/Scripts/activate
+$ pip install -r requirements.txt
 # Run Setup
-$ python(3) -m setup
+$ py manage.py runserver
 
 ```
 
