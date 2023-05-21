@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OTP</title>
+	<!--
+    Template 2105 Input
+	http://www.tooplate.com/view/2105-input
+	-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tooplate.css' %}">
+</head>
+
+<body id="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <header class="mb-5">
+                    <h3 class="mt-0 white-text">Enter OTP</h3>
+                    <p class="grey-text mb-4">Enter your username and password !!</p>
+                    <p class="grey-text">Password should not be entirely numeric and must have atleast 8 characters (use combination of numbers, letters or symbols)
+                    </p>
+                </header>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <form method="post" class="tm-signup-form">
+                    {% csrf_token %}
+                    {{ form.non_field_errors.as_text  | safe }}
+                    <div class="input-field">
+
+                        <input placeholder="enter your otp" id="otp" name="otp" type="number" class="validate">
+                        
+                    </div>
+                    
+
+                    <div class="text-right mt-4">
+                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 tm-border-radius-0">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+       
+    </div>
+
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>

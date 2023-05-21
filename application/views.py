@@ -1,8 +1,10 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
+import random
+from .otp import sms
 from .forms import signupform
-from .models import Details
+from .models import Details,Otp
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -74,4 +76,18 @@ def display(request):
     else:
         return redirect('details')
     
-    
+@login_required
+def forgot(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        if Details.objects.filter(username = username).exists():
+            details = Details.objects.filter(username=username).values()
+            phone = "+91"+ details[0]['mobile']
+            otp = random.randint(10000,100000)
+            sms(phone,"your otp for password reset is"+str(otp))
+            onetime = Otp(username=username,otp=otp)
+            onetime.save()
+            return render(request,'otp.html')
+
+    return render(request,'forgot.html')
+

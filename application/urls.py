@@ -7,5 +7,7 @@ urlpatterns=[
     path('login/',loginuser,name='login'),
     path('logout/',logoutuser),
     path('details/',details,name='details'),
-    path('display/',display,name='display')
+    path('display/',display,name='display'),
+    path('forgot/',forgot,name='forgot')
+    
 ]

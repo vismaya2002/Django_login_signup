@@ -11,3 +11,7 @@ class Details(models.Model):
     address = models.TextField()
     district = models.CharField(max_length=20)
     city  = models.CharField(max_length=20)
+    
+class Otp(models.Model):
+    username = models.CharField(max_length=20,primary_key=True)
+    otp = models.IntegerField(default=0)
